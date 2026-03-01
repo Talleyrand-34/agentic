@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/soulcodex/agentic/schemas/profile.schema.json",
+  "title": "Composition Profile",
+  "description": "Declares which agent fragments to combine into a single AGENTS.md",
+  "type": "object",
+  "required": ["meta", "fragments", "output", "vendors"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["name", "description", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable profile name"
+        },
+        "description": {
+          "type": "string",
+          "description": "What this profile is for"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "SemVer version of this profile"
+        }
+      }
+    },
+    "fragments": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Fragment names from agents/base/ (without .md extension)",
+          "default": []
+        },
+        "languages": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Fragment names from agents/languages/ (without .md extension)",
+          "default": []
+        },
+        "frameworks": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Fragment names from agents/frameworks/ (without .md, with subdir: frontend/react)",
+          "default": []
+        },
+        "architecture": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Fragment names from agents/architecture/ (without .md extension)",
+          "default": []
+        },
+        "practices": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Fragment names from agents/practices/ (without .md extension)",
+          "default": []
+        },
+        "domains": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Fragment names from agents/domains/ (without .md extension)",
+          "default": []
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "build_command": {
+          "type": "string",
+          "description": "Command to build the project"
+        },
+        "test_command": {
+          "type": "string",
+          "description": "Command to run tests"
+        },
+        "lint_command": {
+          "type": "string",
+          "description": "Command to run linting"
+        },
+        "project_header": {
+          "type": "string",
+          "description": "Optional text injected at the top of the assembled AGENTS.md"
+        }
+      }
+    },
+    "vendors": {
+      "type": "object",
+      "required": ["enabled"],
+      "additionalProperties": false,
+      "properties": {
+        "enabled": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["claude", "copilot", "codex", "gemini"]
+          },
+          "description": "Which vendor adapter files to generate"
+        }
+      }
+    }
+  }
+}

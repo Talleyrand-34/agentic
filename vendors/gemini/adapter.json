@@ -1,0 +1,68 @@
+{
+  "$schema": "../_schema/adapter.schema.json",
+  "vendor": "gemini",
+  "version": "1.0.0",
+  "output_paths": {
+    "base": ".gemini"
+  },
+  "section_mappings": [
+    {
+      "agents_md_heading": "## Git Conventions",
+      "output_file": "systemPrompt.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Security",
+      "output_file": "systemPrompt.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Code Review",
+      "output_file": "systemPrompt.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Testing Philosophy",
+      "output_file": "systemPrompt.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Documentation",
+      "output_file": "systemPrompt.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## TypeScript",
+      "output_file": "systemPrompt.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Go",
+      "output_file": "systemPrompt.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Python",
+      "output_file": "systemPrompt.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## PHP",
+      "output_file": "systemPrompt.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    }
+  ],
+  "unsupported_sections": [],
+  "character_limit_per_file": null,
+  "total_character_limit": null,
+  "notes": "Gemini CLI reads .gemini/systemPrompt.md as the system prompt for the session. All sections are concatenated into this single file. GEMINI.md at the project root is also supported as an alternative location."
+}

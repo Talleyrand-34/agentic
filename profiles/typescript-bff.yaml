@@ -1,0 +1,48 @@
+meta:
+  name: "TypeScript BFF"
+  description: >
+    TypeScript Backend for Frontend layer that aggregates downstream microservices
+    and exposes a client-optimized API. Stateless, no domain logic.
+  version: "1.0.0"
+
+fragments:
+  base:
+    - git-conventions
+    - security
+    - code-review
+    - testing-philosophy
+    - documentation
+
+  languages:
+    - typescript
+
+  frameworks: []
+
+  architecture:
+    - bff
+    - microservices
+
+  practices:
+    - api-design
+    - observability
+    - ci-cd
+
+  domains: []
+
+output:
+  build_command: "pnpm build"
+  test_command: "pnpm test --run"
+  lint_command: "pnpm lint"
+  project_header: |
+    This is a TypeScript BFF (Backend for Frontend).
+    It aggregates data from downstream microservices and shapes it for a specific client.
+    No business logic here — only aggregation, transformation, and caching.
+    No database writes — state changes are delegated to downstream services.
+    Optimize for the client: fan out downstream calls in parallel with Promise.all.
+
+vendors:
+  enabled:
+    - claude
+    - copilot
+    - codex
+    - gemini

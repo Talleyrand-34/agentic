@@ -1,0 +1,47 @@
+meta:
+  name: "Python FastAPI Microservice"
+  description: >
+    Python microservice with FastAPI, hexagonal architecture, and full type annotations.
+    Uses uv for dependency management, Pydantic for validation, and pytest for testing.
+  version: "1.0.0"
+
+fragments:
+  base:
+    - git-conventions
+    - security
+    - code-review
+    - testing-philosophy
+    - documentation
+
+  languages:
+    - python
+
+  frameworks: []
+
+  architecture:
+    - hexagonal
+    - microservices
+
+  practices:
+    - tdd
+    - api-design
+    - observability
+    - ci-cd
+
+  domains: []
+
+output:
+  build_command: "uv build"
+  test_command: "uv run pytest"
+  lint_command: "uv run ruff check . && uv run mypy ."
+  project_header: |
+    This is a Python microservice built with FastAPI and hexagonal architecture.
+    Use src/ layout. The domain layer must not import from infrastructure or FastAPI.
+    All settings come from environment variables via a Pydantic Settings class.
+
+vendors:
+  enabled:
+    - claude
+    - copilot
+    - codex
+    - gemini

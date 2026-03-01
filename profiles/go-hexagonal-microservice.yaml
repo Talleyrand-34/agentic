@@ -1,0 +1,49 @@
+meta:
+  name: "Go Hexagonal Microservice"
+  description: >
+    Go backend microservice following hexagonal architecture with DDD patterns.
+    Idiomatic Go: explicit error handling, small interfaces, no global state.
+  version: "1.0.0"
+
+fragments:
+  base:
+    - git-conventions
+    - security
+    - code-review
+    - testing-philosophy
+    - documentation
+
+  languages:
+    - go
+
+  frameworks: []
+
+  architecture:
+    - hexagonal
+    - ddd
+    - microservices
+
+  practices:
+    - tdd
+    - api-design
+    - observability
+    - ci-cd
+
+  domains: []
+
+output:
+  build_command: "go build ./..."
+  test_command: "go test ./... -race -cover"
+  lint_command: "golangci-lint run"
+  project_header: |
+    This is a Go microservice built with hexagonal architecture.
+    The domain package must have zero external dependencies — no database drivers,
+    no HTTP frameworks, no ORMs.
+    All dependencies are injected via interfaces defined in the domain or application layer.
+
+vendors:
+  enabled:
+    - claude
+    - copilot
+    - codex
+    - gemini

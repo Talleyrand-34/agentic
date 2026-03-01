@@ -1,0 +1,139 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-03-01T16:54:00Z",
+  "fragments": [
+    {
+      "name": "bff",
+      "group": "architecture",
+      "path": "agents/architecture/bff.md",
+      "heading": "BFF (Backend for Frontend)",
+      "words": 464
+    },
+    {
+      "name": "cqrs",
+      "group": "architecture",
+      "path": "agents/architecture/cqrs.md",
+      "heading": "CQRS (Command Query Responsibility Segregation)",
+      "words": 420
+    },
+    {
+      "name": "ddd",
+      "group": "architecture",
+      "path": "agents/architecture/ddd.md",
+      "heading": "Domain-Driven Design (DDD)",
+      "words": 484
+    },
+    {
+      "name": "event-sourcing",
+      "group": "architecture",
+      "path": "agents/architecture/event-sourcing.md",
+      "heading": "Event Sourcing",
+      "words": 411
+    },
+    {
+      "name": "hexagonal",
+      "group": "architecture",
+      "path": "agents/architecture/hexagonal.md",
+      "heading": "Hexagonal Architecture",
+      "words": 421
+    },
+    {
+      "name": "microservices",
+      "group": "architecture",
+      "path": "agents/architecture/microservices.md",
+      "heading": "Microservices",
+      "words": 391
+    },
+    {
+      "name": "code-review",
+      "group": "base",
+      "path": "agents/base/code-review.md",
+      "heading": "Code Review",
+      "words": 352
+    },
+    {
+      "name": "documentation",
+      "group": "base",
+      "path": "agents/base/documentation.md",
+      "heading": "Documentation",
+      "words": 335
+    },
+    {
+      "name": "git-conventions",
+      "group": "base",
+      "path": "agents/base/git-conventions.md",
+      "heading": "Git Conventions",
+      "words": 185
+    },
+    {
+      "name": "security",
+      "group": "base",
+      "path": "agents/base/security.md",
+      "heading": "Security",
+      "words": 372
+    },
+    {
+      "name": "testing-philosophy",
+      "group": "base",
+      "path": "agents/base/testing-philosophy.md",
+      "heading": "Testing Philosophy",
+      "words": 386
+    },
+    {
+      "name": "go",
+      "group": "languages",
+      "path": "agents/languages/go.md",
+      "heading": "Go",
+      "words": 418
+    },
+    {
+      "name": "php",
+      "group": "languages",
+      "path": "agents/languages/php.md",
+      "heading": "PHP",
+      "words": 393
+    },
+    {
+      "name": "python",
+      "group": "languages",
+      "path": "agents/languages/python.md",
+      "heading": "Python",
+      "words": 339
+    },
+    {
+      "name": "typescript",
+      "group": "languages",
+      "path": "agents/languages/typescript.md",
+      "heading": "TypeScript",
+      "words": 353
+    },
+    {
+      "name": "api-design",
+      "group": "practices",
+      "path": "agents/practices/api-design.md",
+      "heading": "API Design",
+      "words": 488
+    },
+    {
+      "name": "ci-cd",
+      "group": "practices",
+      "path": "agents/practices/ci-cd.md",
+      "heading": "CI/CD",
+      "words": 444
+    },
+    {
+      "name": "observability",
+      "group": "practices",
+      "path": "agents/practices/observability.md",
+      "heading": "Observability",
+      "words": 398
+    },
+    {
+      "name": "tdd",
+      "group": "practices",
+      "path": "agents/practices/tdd.md",
+      "heading": "Test-Driven Development (TDD)",
+      "words": 397
+    }
+  ]
+}

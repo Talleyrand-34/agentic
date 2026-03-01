@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/soulcodex/agentic/schemas/skill.schema.json",
+  "title": "Skill Definition",
+  "description": "Frontmatter schema for SKILL.md files",
+  "type": "object",
+  "required": ["name", "description", "version", "tags", "vendor_support"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "Kebab-case skill identifier"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "description": "What this skill does and when it is invoked"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "SemVer version"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Categorization tags for discoverability"
+    },
+    "resources": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Supporting files in the same directory, loaded into context",
+      "default": []
+    },
+    "vendor_support": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "claude": {
+          "type": "string",
+          "enum": ["native", "prompt-inject", "unsupported"],
+          "description": "How this skill is deployed for Claude Code"
+        },
+        "copilot": {
+          "type": "string",
+          "enum": ["native", "prompt-inject", "unsupported"],
+          "description": "How this skill is deployed for GitHub Copilot"
+        },
+        "codex": {
+          "type": "string",
+          "enum": ["native", "prompt-inject", "unsupported"],
+          "description": "How this skill is deployed for OpenAI Codex"
+        },
+        "gemini": {
+          "type": "string",
+          "enum": ["native", "prompt-inject", "unsupported"],
+          "description": "How this skill is deployed for Gemini"
+        }
+      }
+    }
+  }
+}

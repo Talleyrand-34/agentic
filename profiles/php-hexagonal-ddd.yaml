@@ -1,0 +1,49 @@
+meta:
+  name: "PHP Hexagonal DDD"
+  description: >
+    PHP 8.3+ application using Symfony, hexagonal architecture, and DDD patterns.
+    Strict types everywhere. PHPStan level 8. PHP-CS-Fixer for formatting.
+  version: "1.0.0"
+
+fragments:
+  base:
+    - git-conventions
+    - security
+    - code-review
+    - testing-philosophy
+    - documentation
+
+  languages:
+    - php
+
+  frameworks: []
+
+  architecture:
+    - hexagonal
+    - ddd
+    - cqrs
+
+  practices:
+    - tdd
+    - api-design
+    - observability
+    - ci-cd
+
+  domains: []
+
+output:
+  build_command: "composer install --no-dev --optimize-autoloader"
+  test_command: "vendor/bin/phpunit"
+  lint_command: "vendor/bin/phpstan analyse && vendor/bin/php-cs-fixer fix --dry-run"
+  project_header: |
+    This is a PHP 8.3+ application with Symfony, hexagonal architecture, and DDD.
+    All files must declare strict_types=1.
+    The Domain layer must have zero Symfony dependencies — only PHP primitives and interfaces.
+    Use readonly for value objects and constructor property promotion for DTOs.
+
+vendors:
+  enabled:
+    - claude
+    - copilot
+    - codex
+    - gemini

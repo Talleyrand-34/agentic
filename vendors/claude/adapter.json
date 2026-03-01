@@ -1,0 +1,45 @@
+{
+  "$schema": "../_schema/adapter.schema.json",
+  "vendor": "claude",
+  "version": "1.0.0",
+  "output_paths": {
+    "base": ".",
+    "skills": ".claude/skills"
+  },
+  "section_mappings": [
+    {
+      "agents_md_heading": "## Git Conventions",
+      "output_file": "AGENTS.md",
+      "activation_mode": "passthrough",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Security",
+      "output_file": "AGENTS.md",
+      "activation_mode": "passthrough",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Code Review",
+      "output_file": "AGENTS.md",
+      "activation_mode": "passthrough",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Testing Philosophy",
+      "output_file": "AGENTS.md",
+      "activation_mode": "passthrough",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Documentation",
+      "output_file": "AGENTS.md",
+      "activation_mode": "passthrough",
+      "frontmatter": {}
+    }
+  ],
+  "unsupported_sections": [],
+  "character_limit_per_file": null,
+  "total_character_limit": null,
+  "notes": "Claude reads AGENTS.md natively. The adapter is a passthrough — all sections land in the single AGENTS.md file. CLAUDE.md is created as a symlink. Skills are deployed to .claude/skills/ where Claude Code can discover them."
+}

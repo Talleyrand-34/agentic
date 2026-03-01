@@ -1,0 +1,76 @@
+{
+  "$schema": "../_schema/adapter.schema.json",
+  "vendor": "copilot",
+  "version": "1.0.0",
+  "output_paths": {
+    "base": ".github"
+  },
+  "section_mappings": [
+    {
+      "agents_md_heading": "## Git Conventions",
+      "output_file": "copilot-instructions.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Security",
+      "output_file": "copilot-instructions.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Code Review",
+      "output_file": "copilot-instructions.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Testing Philosophy",
+      "output_file": "copilot-instructions.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## Documentation",
+      "output_file": "copilot-instructions.md",
+      "activation_mode": "always-on",
+      "frontmatter": {}
+    },
+    {
+      "agents_md_heading": "## TypeScript",
+      "output_file": "instructions/typescript.instructions.md",
+      "activation_mode": "glob-scoped",
+      "frontmatter": {
+        "applyTo": "**/*.ts,**/*.tsx"
+      }
+    },
+    {
+      "agents_md_heading": "## Go",
+      "output_file": "instructions/go.instructions.md",
+      "activation_mode": "glob-scoped",
+      "frontmatter": {
+        "applyTo": "**/*.go"
+      }
+    },
+    {
+      "agents_md_heading": "## Python",
+      "output_file": "instructions/python.instructions.md",
+      "activation_mode": "glob-scoped",
+      "frontmatter": {
+        "applyTo": "**/*.py"
+      }
+    },
+    {
+      "agents_md_heading": "## PHP",
+      "output_file": "instructions/php.instructions.md",
+      "activation_mode": "glob-scoped",
+      "frontmatter": {
+        "applyTo": "**/*.php"
+      }
+    }
+  ],
+  "unsupported_sections": [],
+  "character_limit_per_file": null,
+  "total_character_limit": null,
+  "notes": "Copilot reads .github/copilot-instructions.md as always-on global instructions. Language-specific instructions use .github/instructions/*.instructions.md with applyTo frontmatter for glob scoping. Skills are injected as prompt text in copilot-instructions.md."
+}

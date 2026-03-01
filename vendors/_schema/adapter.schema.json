@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/soulcodex/agentic/vendors/_schema/adapter.schema.json",
+  "title": "Vendor Adapter",
+  "description": "Defines how to transform an assembled AGENTS.md into a vendor-specific format",
+  "type": "object",
+  "required": ["vendor", "version", "output_paths", "section_mappings"],
+  "additionalProperties": false,
+  "properties": {
+    "vendor": {
+      "type": "string",
+      "enum": ["claude", "copilot", "codex", "gemini"],
+      "description": "The vendor this adapter targets"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "SemVer version of this adapter"
+    },
+    "output_paths": {
+      "type": "object",
+      "required": ["base"],
+      "additionalProperties": false,
+      "properties": {
+        "base": {
+          "type": "string",
+          "description": "Base output path relative to the target project root"
+        },
+        "skills": {
+          "type": "string",
+          "description": "Path where skills are deployed (if vendor supports skills)"
+        }
+      }
+    },
+    "section_mappings": {
+      "type": "array",
+      "description": "Maps AGENTS.md H2 headings to vendor output files",
+      "items": {
+        "type": "object",
+        "required": ["agents_md_heading", "output_file", "activation_mode"],
+        "additionalProperties": false,
+        "properties": {
+          "agents_md_heading": {
+            "type": "string",
+            "description": "H2 heading in the assembled AGENTS.md (e.g. '## TypeScript')"
+          },
+          "output_file": {
+            "type": "string",
+            "description": "Output filename relative to output_paths.base"
+          },
+          "activation_mode": {
+            "type": "string",
+            "enum": ["always-on", "glob-scoped", "agent-requested", "passthrough"],
+            "description": "How the vendor activates this rule"
+          },
+          "frontmatter": {
+            "type": "object",
+            "description": "Vendor-specific frontmatter to prepend to the output file",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "unsupported_sections": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "AGENTS.md H2 headings this vendor cannot represent",
+      "default": []
+    },
+    "character_limit_per_file": {
+      "type": ["integer", "null"],
+      "description": "Character limit per output file (null = no limit)"
+    },
+    "total_character_limit": {
+      "type": ["integer", "null"],
+      "description": "Total character limit across all output files (null = no limit)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Human-readable notes about this vendor's adapter"
+    }
+  }
+}

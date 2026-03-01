@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-03-01T16:54:00Z",
+  "skills": [
+    {
+      "name": "compose-agents-md",
+      "group": "agentic",
+      "path": "skills/agentic/compose-agents-md/SKILL.md",
+      "description": ">",
+      "version": "1.0.0",
+      "tags": [
+        "agentic",
+        "meta",
+        "setup"
+      ]
+    },
+    {
+      "name": "deploy-config",
+      "group": "agentic",
+      "path": "skills/agentic/deploy-config/SKILL.md",
+      "description": ">",
+      "version": "1.0.0",
+      "tags": [
+        "agentic",
+        "meta",
+        "deployment"
+      ]
+    },
+    {
+      "name": "add-tests",
+      "group": "development",
+      "path": "skills/development/add-tests/SKILL.md",
+      "description": ">",
+      "version": "1.0.0",
+      "tags": [
+        "testing",
+        "quality",
+        "tdd"
+      ]
+    },
+    {
+      "name": "code-review",
+      "group": "development",
+      "path": "skills/development/code-review/SKILL.md",
+      "description": ">",
+      "version": "1.0.0",
+      "tags": [
+        "quality",
+        "review",
+        "security",
+        "checklist.md"
+      ]
+    },
+    {
+      "name": "fix-bug",
+      "group": "development",
+      "path": "skills/development/fix-bug/SKILL.md",
+      "description": ">",
+      "version": "1.0.0",
+      "tags": [
+        "debugging",
+        "fix",
+        "quality"
+      ]
+    },
+    {
+      "name": "refactor",
+      "group": "development",
+      "path": "skills/development/refactor/SKILL.md",
+      "description": ">",
+      "version": "1.0.0",
+      "tags": [
+        "refactoring",
+        "quality",
+        "design"
+      ]
+    },
+    {
+      "name": "write-dockerfile",
+      "group": "devops",
+      "path": "skills/devops/write-dockerfile/SKILL.md",
+      "description": ">",
+      "version": "1.0.0",
+      "tags": [
+        "devops",
+        "docker",
+        "containers"
+      ]
+    },
+    {
+      "name": "write-adr",
+      "group": "documentation",
+      "path": "skills/documentation/write-adr/SKILL.md",
+      "description": ">",
+      "version": "1.0.0",
+      "tags": [
+        "documentation",
+        "architecture",
+        "decision",
+        "adr-template.md"
+      ]
+    },
+    {
+      "name": "write-changelog",
+      "group": "documentation",
+      "path": "skills/documentation/write-changelog/SKILL.md",
+      "description": ">",
+      "version": "1.0.0",
+      "tags": [
+        "documentation",
+        "release",
+        "changelog"
+      ]
+    },
+    {
+      "name": "write-readme",
+      "group": "documentation",
+      "path": "skills/documentation/write-readme/SKILL.md",
+      "description": ">",
+      "version": "1.0.0",
+      "tags": [
+        "documentation",
+        "readme"
+      ]
+    }
+  ]
+}

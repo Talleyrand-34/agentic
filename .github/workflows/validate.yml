@@ -1,0 +1,39 @@
+name: Validate & Index
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install just
+        uses: extractions/setup-just@v2
+
+      - name: Install yq
+        run: |
+          wget -qO /usr/local/bin/yq \
+            https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          chmod +x /usr/local/bin/yq
+
+      - name: Install jq
+        run: sudo apt-get install -y jq
+
+      - name: Lint fragments, profiles, and adapters
+        run: just lint
+
+      - name: Rebuild indexes
+        run: just index
+
+      - name: Check index files are up to date
+        run: |
+          if ! git diff --quiet index/; then
+            echo "Index files are out of date. Run 'just index' and commit the result."
+            git diff index/
+            exit 1
+          fi
