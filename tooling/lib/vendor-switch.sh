@@ -1,8 +1,8 @@
 #!/bin/bash
 # vendor-switch.sh — Switches the active AI vendor(s) in a target project
 # Called by: just vendor-switch <target> <vendors>
-#            TARGET/agentic <vendor[,vendor...]|list|sync>
-# Supports multiple vendors: ./agentic claude,copilot or ./agentic claude copilot
+#            agentic switch <vendor[,vendor...]|list|sync>
+# Supports multiple vendors: agentic switch claude,copilot or agentic switch claude copilot
 set -euo pipefail
 
 # ── Argument parsing ──────────────────────────────────────────────────────────
@@ -269,4 +269,4 @@ if [[ -n "$CURRENT_VENDORS" && "$CURRENT_VENDORS" != "${VENDORS[*]}" ]]; then
   echo "Previous vendors: $CURRENT_VENDORS"
 fi
 echo ""
-echo "Note: Symlinks are gitignored. After cloning, run './agentic ${VENDORS[*]}' to recreate them."
+echo "Note: Symlinks are gitignored. After cloning, run 'agentic switch ${VENDORS[*]}' to recreate them."
